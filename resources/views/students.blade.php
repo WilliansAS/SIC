@@ -1,4 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/lista.css') }}">
+@vite('resources/css/app.css')
+
 <nav class="navbar">
     <h1>Lista de estudiantes</h1>
     <div class="nav-links">
@@ -20,9 +22,9 @@
             <td>{{$student->name_student}}</td>
             <td>{{$student->lastname_student}}</td>
             <td>{{$student->birthday}}</td>
-            <td>
-                <a href="{{route('estudiantes.show', $student->id)}}">Detalles</a>
-                <a href="{{route('estudiantes.edit', $student->id)}}">Editar</a>
+            <td class="botones">
+                <a class="detalles" href="{{route('estudiantes.show', $student->id)}}">Detalles</a>
+                <a  class="editar" href="{{route('estudiantes.edit', $student->id)}}">Editar</a>
             </td>
         </tr>
     @endforeach

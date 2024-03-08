@@ -1,4 +1,10 @@
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<nav class="navbar">
+    <h1>SIC</h1>
+    <div class="nav-links">
+        <a href="/estudiantes">Regresar</a>
+    </div>
+</nav>
 
 <form action="{{ route('estudiantes.update', $student->id)}}" method="POST" class="container">
     <h3>Editar Estudiante</h3>
@@ -36,5 +42,4 @@
     <textarea name="comments" placeholder="Ingresar comentario" value="{{ $student->comments }}"></textarea>
 
     <button type="submit" class="shadow-drop-center">Editar</button>
-    <input type="reset" class="boton">
 </form>
